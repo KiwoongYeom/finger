@@ -1,0 +1,71 @@
+<HTML>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<style>
+    .go { height:100%;}
+    #left_banner{	
+		position: fixed;
+		float:right;
+		width:150px;
+		height:90%;
+		left:80%;
+		text-align: center;
+		background-color:#ffffff;
+		border:1px solid #dcdcdc;
+	}
+	.going {	
+		background-color:#ffffff;
+		border:1px solid #dcdcdc;
+		color:#666666;
+		font-family:Arial;
+		font-size:20px;
+		font-weight:bold;
+		padding:15px 48px;
+		text-decoration:none;
+		text-shadow:0px 1px 0px #ffffff;
+	}
+
+
+</style>
+<script>
+	
+
+    function fnMove(seq){
+        var offset = $("#div" + seq).offset();
+        $('html, body').animate({scrollTop : offset.top}, 400);
+    }
+</script>
+ <BODY>
+ 	<div id='left_banner'>
+ 		<button class="going" onclick="fnMove('1')">move div1</button><br>
+		<button class="going" onclick="fnMove('2')">move div2</button><br>
+		<button class="going" onclick="fnMove('3')">move div3</button><br>
+		<button class="going" onclick="fnMove('4')">move div4</button><br>
+		<button class="going" onclick="fnMove('5')">move div5</button><br>
+		<button class="going" onclick="fnMove('6')">move div6</button>
+		<button class="going" onclick="fnMove('7')">move div7</button>
+ 	</div>
+
+    <div class="go" id="div1">
+    	div1
+    </div>
+
+    <div class="go" id="div2">
+    	div2
+    </div>
+    <div class="go" id="div3">
+    	div3
+    </div>
+    <div class="go" id="div4">
+    	div4
+    </div>
+    <div class="go" id="div5">
+    	div5
+    </div>
+    <div class="go" id="div6">
+    	div6
+    </div>
+    <div class="go" id="div7">
+    	div7
+    </div>
+ </BODY>
+</HTML>
