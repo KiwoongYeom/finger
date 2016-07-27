@@ -1,7 +1,62 @@
 <HTML>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <style>
-    .go { height:100%;}
+	.page1{
+		background: url(images/p1.jpg) no-repeat center center fixed;
+		-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height:110%;
+	}
+	.page2{
+		background: url(images/p2.jpg) no-repeat center center fixed;
+		-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height:110%;
+	}
+	.page3{
+		background: url(images/p3.jpg) no-repeat center center fixed;
+		-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height:110%;
+	}
+	.page4{
+		background: url(images/p4.jpg) no-repeat center center fixed;
+		-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height:110%;
+	}
+	.page5{
+		background: url(images/p5.jpg) no-repeat center center fixed;
+		-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height:110%;
+	}
+	.page6{
+		background: url(images/p6.jpg) no-repeat center center fixed;
+		-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height:110%;
+	}
+	.page7{
+		background: url(images/p7.jpg) no-repeat center center fixed;
+		-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height:110%;
+	}
     #left_banner{	
 		position: fixed;
 		float:right;
@@ -22,13 +77,12 @@
 		padding:15px 48px;
 		text-decoration:none;
 		text-shadow:0px 1px 0px #ffffff;
+		width:100%;
+		height: 80px;
 	}
-
-
 </style>
 <script>
 	
-
     function fnMove(seq){
         var offset = $("#div" + seq).offset();
         $('html, body').animate({scrollTop : offset.top}, 400);
@@ -45,27 +99,32 @@
 		<button class="going" onclick="fnMove('7')">move div7</button>
  	</div>
 
-    <div class="go" id="div1">
-    	div1
+    <div class="page1" id="div1">
+    	
     </div>
 
-    <div class="go" id="div2">
-    	div2
+    <div class="page2" id="div2">
+    	
     </div>
-    <div class="go" id="div3">
-    	div3
+
+    <div class="page3" id="div3">
+    	
     </div>
-    <div class="go" id="div4">
-    	div4
+
+    <div class="page4" id="div4">
+
     </div>
-    <div class="go" id="div5">
-    	div5
+
+    <div class="page5" id="div5">
+    	
     </div>
-    <div class="go" id="div6">
-    	div6
+
+    <div class="page6" id="div6">
+    	
     </div>
-    <div class="go" id="div7">
-    	div7
+
+    <div class="page7" id="div7">
+    	
     </div>
  </BODY>
 </HTML>
