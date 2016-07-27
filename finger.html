@@ -57,6 +57,7 @@
         background-size: cover;
         height:110%;
 	}
+	
     #left_banner{	
 		position: fixed;
 		float:right;
@@ -82,11 +83,60 @@
 	}
 </style>
 <script>
-	
+	var v=1;
+
     function fnMove(seq){
         var offset = $("#div" + seq).offset();
         $('html, body').animate({scrollTop : offset.top}, 400);
+        v=seq;
     }
+
+    $(function(){
+      //Keep track of last scroll
+      var lastScroll = $(this).scrollTop();
+      var key=0;
+      $(window).scroll(function(event){
+          //Sets the current scroll position
+          var st = $(this).scrollTop();
+          //Determines up-or-down scrolling
+          if (st > lastScroll){
+             v++;
+             var offset = $("#div" + v).offset();
+        	 $('html, body').animate({scrollTop : offset.top}, 400);
+        	 
+        	
+          }
+          else {
+             v--;
+             var offset = $("#div" + v).offset();
+        	 $('html, body').animate({scrollTop : offset.top}, 400);
+        	 
+
+          }
+          //Updates scroll position
+          lastScroll = st;
+      });
+    });
+	/*var didScroll;
+	// 스크롤시에 사용자가 스크롤했다는 것을 알림 
+	$(window).scroll(function(event){
+	    didScroll = true;
+
+	});
+
+	// hasScrolled()를 실행하고 didScroll 상태를 재설정
+	setInterval(function() {
+	    if (didScroll) {
+	        hasScrolled();
+	        didScroll = false;
+	    }
+	}, 250);
+
+	function hasScrolled() {
+		var offset = $("#div" + v).offset();
+        $('html, body').animate({scrollTop : offset.top}, 400);
+	}*/
+
 </script>
  <BODY>
  	<div id='left_banner'>
@@ -98,7 +148,7 @@
 		<button class="going" onclick="fnMove('6')">move div6</button>
 		<button class="going" onclick="fnMove('7')">move div7</button>
  	</div>
-
+<div class="Scroll">
     <div class="page1" id="div1">
     	
     </div>
@@ -126,5 +176,6 @@
     <div class="page7" id="div7">
     	
     </div>
+</div>
  </BODY>
 </HTML>
