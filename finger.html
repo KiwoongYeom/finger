@@ -1,4 +1,4 @@
-<HTML>
+﻿<HTML>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <style>
 	.page1{
@@ -83,41 +83,53 @@
 	}
 </style>
 <script>
-	var v=1;
-
+	
+	
     function fnMove(seq){
         var offset = $("#div" + seq).offset();
         $('html, body').animate({scrollTop : offset.top}, 400);
-        v=seq;
+        //v=seq;
     }
 
-    $(function(){
+    //스크롤 다운
+    /*var k=0;
+    var v=1;
+	var i=0;*/
+    /*$(function(){
       //Keep track of last scroll
-      var lastScroll = $(this).scrollTop();
-      var key=0;
+      var lastScroll = $("#div" + v).offset();
+
       $(window).scroll(function(event){
           //Sets the current scroll position
           var st = $(this).scrollTop();
+          //(lastScroll+" 와  "+st+"v값"+v);
           //Determines up-or-down scrolling
-          if (st > lastScroll){
-             v++;
-             var offset = $("#div" + v).offset();
-        	 $('html, body').animate({scrollTop : offset.top}, 400);
-        	 
-        	
+         // k=true;
+          if (st > lastScroll &&st-lastScroll<50){
+          	k++;
+          	if(k%2==0)
+            	v++;             
+        	 //alert("dd");
           }
-          else {
-             v--;
-             var offset = $("#div" + v).offset();
-        	 $('html, body').animate({scrollTop : offset.top}, 400);
-        	 
+          else if(st < lastScroll &&lastScroll-st<50) {
+          	k++;
+          	if(k%2==0)
+            	v--;
+             
+        	 //alert("rr");
+          }
 
-          }
-          //Updates scroll position
+          var offset = $("#div" + v).offset();
+          
+        	 $('html, body').animate({scrollTop : offset.top}, 400);
+          
+          //i++;
           lastScroll = st;
-      });
+          
+      });*/
+/*
     });
-	/*var didScroll;
+	var didScroll;
 	// 스크롤시에 사용자가 스크롤했다는 것을 알림 
 	$(window).scroll(function(event){
 	    didScroll = true;
@@ -138,6 +150,7 @@
 	}*/
 
 </script>
+
  <BODY>
  	<div id='left_banner'>
  		<button class="going" onclick="fnMove('1')">move div1</button><br>
