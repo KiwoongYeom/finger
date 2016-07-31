@@ -1,7 +1,0 @@
-diff a/finger.html b/finger.html	(rejected hunks)
-@@ -0,4 +0,5 @@
- <HTML>
-+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
- <style>
-     .go { height:100%;}
-     #left_banner{	
