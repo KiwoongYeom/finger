@@ -19,6 +19,17 @@
     cursor: pointer;
 }
 
+.gourl{
+    margin-bottom: 5px;
+    background: #fff;
+    border: 1px solid #dcdcdc;
+    color: #666;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 50% 50%;
+    cursor: pointer;
+}
+
 .goto:hover{
     border: 1px solid cornflowerblue;
 }
